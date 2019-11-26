@@ -1,1 +1,2 @@
-Search, organize and create recipes.
+Search, organise and create recipes.
+
