@@ -42,31 +42,33 @@ const AddRecipe = props => {
 	return (
 		<AuthUserContext.Consumer>
 			{authUser => (
-				<form onSubmit={handleSubmit}>
-					<div>
-						<div xs={7}>
-							<RecipeTitle recipe={recipe} setRecipe={setRecipe} />
-							<AddIngredient
-								setIngredient={setIngredient}
-								ingredient={ingredient}
-								handleAddIngredient={handleAddIngredient}
-							/>
-
-							<IngredientsList ingredients={recipe.ingredients} />
-
-							<Instructions setRecipe={setRecipe} recipe={recipe} />
-						</div>
-						<div xs={4}>
+				<div className="add-recipe-container">
+					<form onSubmit={handleSubmit}>
+						<div>
 							<div>
-								<Image recipe={recipe} />
-								<RecipeDetails />
+								<RecipeTitle recipe={recipe} setRecipe={setRecipe} />
+								<AddIngredient
+									setIngredient={setIngredient}
+									ingredient={ingredient}
+									handleAddIngredient={handleAddIngredient}
+								/>
+
+								<IngredientsList ingredients={recipe.ingredients} />
+
+								<Instructions setRecipe={setRecipe} recipe={recipe} />
+							</div>
+							<div>
+								<div>
+									<Image recipe={recipe} />
+									<RecipeDetails />
+								</div>
+							</div>
+							<div className="text-center">
+								<button type="submit">Submit</button>
 							</div>
 						</div>
-						<div xs={12} className="text-center">
-							<button type="submit">Submit</button>
-						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			)}
 		</AuthUserContext.Consumer>
 	)

@@ -4,9 +4,8 @@ const UrlBar = props => {
 	const [url, setUrl] = useState("Your url")
 
 	return (
-		<div xs={10}>
+		<div>
 			<input
-				style={{ width: "70%" }}
 				defaultValue={url}
 				onChange={e => setUrl(e.target.value)}
 			></input>
