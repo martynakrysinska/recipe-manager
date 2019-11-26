@@ -1,12 +1,11 @@
 import React from "react"
-import { Input } from "reactstrap"
 
 const Instructions = props => {
 	const { setRecipe, recipe } = props
 	return (
 		<div>
 			<p>Instructions</p>
-			<Input
+			<input
 				type="textarea"
 				onChange={e =>
 					setRecipe(

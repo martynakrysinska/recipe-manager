@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Form, Input, Button } from "reactstrap"
 
 const PasswordForgetFormBase = props => {
 	const [email, setEmail] = useState("")
@@ -20,19 +19,19 @@ const PasswordForgetFormBase = props => {
 
 	const isInvalid = email === ""
 	return (
-		<Form onSubmit={onSubmit}>
-			<Input
+		<form onSubmit={onSubmit}>
+			<input
 				name="email"
 				value={email}
 				onChange={e => setEmail(e.target.value)}
 				type="text"
 				placeholder="Email Address"
 			/>
-			<Button disabled={isInvalid} type="submit">
+			<button disabled={isInvalid} type="submit">
 				Reset My Password
-			</Button>
+			</button>
 			{error && <p>{error.message}</p>}
-		</Form>
+		</form>
 	)
 }
 

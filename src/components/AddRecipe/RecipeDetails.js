@@ -1,37 +1,34 @@
 import React from "react"
-import { Container, Row, Col, Input, Label } from "reactstrap"
 
 const RecipeDetails = props => {
 	return (
-		<Container>
-			<Row>
-				<Col xs={4}>
-					<Label for="recipe-prep-time">prep-time...</Label>
-					<Input type="number" id="recipe-prep-time" />
-				</Col>
-				<Col xs={4}>
-					<Label for="recipe-cook-time">cook-time...</Label>
-					<Input type="number" id="recipe-cook-time" />
-				</Col>
-				<Col xs={4}>
-					<Label for="recipe-servings">servings...</Label>
-					<Input type="number" id="recipe-servings" />
-				</Col>
+		<div>
+			<div xs={4}>
+				<label for="recipe-prep-time">prep-time...</label>
+				<input type="number" id="recipe-prep-time" />
+			</div>
+			<div xs={4}>
+				<label for="recipe-cook-time">cook-time...</label>
+				<input type="number" id="recipe-cook-time" />
+			</div>
+			<div xs={4}>
+				<label for="recipe-servings">servings...</label>
+				<input type="number" id="recipe-servings" />
+			</div>
 
-				<Col xs={6}>
-					<Label for="recipe-cuisines">Cuisines...</Label>
-				</Col>
-				<Col xs={6}>
-					<Label for="recipe-tags">tags...</Label>
-				</Col>
-				<Col xs={6}>
-					<Input id="recipe-cuisines" />
-				</Col>
-				<Col xs={6}>
-					<Input id="recipe-tags" />
-				</Col>
-			</Row>
-		</Container>
+			<div xs={6}>
+				<label for="recipe-cuisines">Cuisines...</label>
+			</div>
+			<div xs={6}>
+				<label for="recipe-tags">tags...</label>
+			</div>
+			<div xs={6}>
+				<input id="recipe-cuisines" />
+			</div>
+			<div xs={6}>
+				<input id="recipe-tags" />
+			</div>
+		</div>
 	)
 }
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { withFirebase } from "../Firebase"
-import { Form, Input, Button } from "reactstrap"
 
 const intitialState = {
 	password1: "",
@@ -26,8 +25,8 @@ const PasswordChangeFormBase = props => {
 	// const isInvalid = password1 !== password2 || password1 === ""
 
 	return (
-		<Form onSubmit={onSubmit}>
-			<Input
+		<div onSubmit={onSubmit}>
+			<input
 				name="password1"
 				onChange={e =>
 					setData(Object.assign(data, { password1: e.target.value }))
@@ -36,7 +35,7 @@ const PasswordChangeFormBase = props => {
 				placeholder="New password"
 			/>
 			<h5>Confirm</h5>
-			<Input
+			<input
 				name="password2"
 				onChange={e =>
 					setData(Object.assign(data, { password2: e.target.value }))
@@ -44,9 +43,9 @@ const PasswordChangeFormBase = props => {
 				type="password"
 				placeholder="Confirm new password"
 			/>
-			<Button type="submit">Reset My Password</Button>
+			<button type="submit">Reset My Password</button>
 			{error && <p>{error.message}</p>}
-		</Form>
+		</div>
 	)
 }
 

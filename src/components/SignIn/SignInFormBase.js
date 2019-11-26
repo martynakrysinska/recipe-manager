@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Form, Input, Label, Button } from "reactstrap"
 import * as ROUTES from "../../constants/routes"
 const initialData = {
 	email: "",
@@ -27,29 +26,29 @@ const SignInFormBase = props => {
 	}
 	return (
 		<div>
-			<Form onSubmit={handleSubmit}>
+			<form onSubmit={handleSubmit}>
 				{error && <p>{error}</p>}
 
-				<Label for="si-email-input">Email</Label>
-				<Input
+				<label for="si-email-input">Email</label>
+				<input
 					id="si-email-input"
 					onChange={e =>
 						setData(Object.assign(data, { email: e.target.value }))
 					}
-				></Input>
-				<Label for="si-password-input">Password</Label>
-				<Input
+				></input>
+				<label for="si-password-input">Password</label>
+				<input
 					type="password"
 					id="si-password-input"
 					onChange={e =>
 						setData(Object.assign(data, { password: e.target.value }))
 					}
-				></Input>
+				></input>
 
-				<Button type="submit" onClick={handleSubmit}>
+				<button type="submit" onClick={handleSubmit}>
 					Submit
-				</Button>
-			</Form>
+				</button>
+			</form>
 		</div>
 	)
 }

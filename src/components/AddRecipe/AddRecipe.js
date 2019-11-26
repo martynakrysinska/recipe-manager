@@ -8,7 +8,6 @@ import {
 	Image,
 	Instructions
 } from "./index"
-import { Button, Form, Container, Row, Col } from "reactstrap"
 
 // Let users submit ingredients on enter and prevent from submitting the form
 
@@ -43,33 +42,31 @@ const AddRecipe = props => {
 	return (
 		<AuthUserContext.Consumer>
 			{authUser => (
-				<Container>
-					<Form onSubmit={handleSubmit}>
-						<Row>
-							<Col xs={7}>
-								<RecipeTitle recipe={recipe} setRecipe={setRecipe} />
-								<AddIngredient
-									setIngredient={setIngredient}
-									ingredient={ingredient}
-									handleAddIngredient={handleAddIngredient}
-								/>
+				<form onSubmit={handleSubmit}>
+					<div>
+						<div xs={7}>
+							<RecipeTitle recipe={recipe} setRecipe={setRecipe} />
+							<AddIngredient
+								setIngredient={setIngredient}
+								ingredient={ingredient}
+								handleAddIngredient={handleAddIngredient}
+							/>
 
-								<IngredientsList ingredients={recipe.ingredients} />
+							<IngredientsList ingredients={recipe.ingredients} />
 
-								<Instructions setRecipe={setRecipe} recipe={recipe} />
-							</Col>
-							<Col xs={4}>
-								<div>
-									<Image recipe={recipe} />
-									<RecipeDetails />
-								</div>
-							</Col>
-							<Col xs={12} className="text-center">
-								<Button type="submit">Submit</Button>
-							</Col>
-						</Row>
-					</Form>
-				</Container>
+							<Instructions setRecipe={setRecipe} recipe={recipe} />
+						</div>
+						<div xs={4}>
+							<div>
+								<Image recipe={recipe} />
+								<RecipeDetails />
+							</div>
+						</div>
+						<div xs={12} className="text-center">
+							<button type="submit">Submit</button>
+						</div>
+					</div>
+				</form>
 			)}
 		</AuthUserContext.Consumer>
 	)

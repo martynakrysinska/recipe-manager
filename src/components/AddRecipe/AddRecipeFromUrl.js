@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Input, Row, Col } from "reactstrap"
 import ListItem from "./ListItem"
 import ListHeader from "./ListHeader"
 import AddItem from "./AddItem"
@@ -14,7 +13,7 @@ const AddFromUrl = props => {
 	let { extendedIngredients } = json
 	const [unit, setUnit] = useState("metric")
 	const [ingredients, setIngredient] = useState(extendedIngredients)
-	console.log(json)
+
 	const deleteItem = (e, id) => {
 		setIngredient(ingredients.filter(item => item.id !== id))
 	}
@@ -32,22 +31,22 @@ const AddFromUrl = props => {
 
 	return (
 		<section div="url-recipe-editor">
-			<Row style={{ width: "80%", margin: "0 auto", padding: "1rem 0 0 0 " }}>
+			<div>
 				{/* <UrlBar></UrlBar> */}
 
-				<Col xs={4}>
-					<Input defaultValue={json.title}></Input>
+				<div xs={4}>
+					<input defaultValue={json.title}></input>
 					<p>{json.diets.map(diet => `${diet} `)}</p>
 					<img src={json.image} width="100%"></img>
 					<h3>Instructions</h3>
-					<Input
+					<input
 						onChange={e => console.log(e.target.value)}
 						type="textarea"
 						style={{ height: "400px" }}
 						defaultValue={json.instructions}
-					></Input>
-				</Col>
-				<Col xs={7}>
+					></input>
+				</div>
+				<div xs={7}>
 					<ListHeader setUnit={setUnit}></ListHeader>
 					<ul>
 						{ingredients.map((ingredient, i) => {
@@ -62,8 +61,8 @@ const AddFromUrl = props => {
 						})}
 						<AddItem addItem={addItem} />
 					</ul>
-				</Col>
-			</Row>
+				</div>
+			</div>
 		</section>
 	)
 }
