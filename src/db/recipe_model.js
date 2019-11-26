@@ -2,8 +2,7 @@ const shortid = require("shortid")
 
 const recipe = {
 	id: shortid(),
-	name: "string",
-	portions: "number",
+	title: "string",
 	image: "string",
 	cookingTime: "number in minutes",
 	addedAt: "date",

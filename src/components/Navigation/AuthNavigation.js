@@ -2,21 +2,25 @@ import React from "react"
 import * as ROUTES from "../../constants/routes"
 import { Link } from "react-router-dom"
 import SignOutButton from "../SignOut"
+import { Nav, NavItem } from "reactstrap"
 const AuthNavigation = () => (
-	<ul>
-		<li>
+	<Nav>
+		<NavItem>
 			<Link to={ROUTES.LANDING}>Landing</Link>
-		</li>
-		<li>
+		</NavItem>
+		<NavItem>
 			<Link to={ROUTES.HOME}>Home</Link>
-		</li>
-		<li>
+		</NavItem>
+		<NavItem>
 			<Link to={ROUTES.ACCOUNT}>Account</Link>
-		</li>
-		<li>
+		</NavItem>
+		<NavItem>
+			<Link to={ROUTES.ADD_RECIPE}>Add recipe</Link>
+		</NavItem>
+		<NavItem>
 			<SignOutButton />
-		</li>
-	</ul>
+		</NavItem>
+	</Nav>
 )
 
 export default AuthNavigation
