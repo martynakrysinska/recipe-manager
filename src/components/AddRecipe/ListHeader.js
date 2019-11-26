@@ -5,13 +5,13 @@ const ListHeader = props => {
 
 	return (
 		<div>
-			<div xs={5}>
+			<div>
 				<h5>Ingredient</h5>
 			</div>
-			<div xs={4}>
+			<div>
 				<h5>Amount</h5>
 			</div>
-			<div xs={3}>
+			<div>
 				<input
 					onChange={e => setUnit(e.target.value.toLowerCase())}
 					type="select"

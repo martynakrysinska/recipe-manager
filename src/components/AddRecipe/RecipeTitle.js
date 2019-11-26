@@ -3,7 +3,7 @@ const RecipeTitle = props => {
 	const { recipe, setRecipe } = props
 	return (
 		<div>
-			<label for="recipe-title">Your title:</label>
+			<label htmlFor="recipe-title">Your title:</label>
 			<input
 				type="text"
 				id="recipe-title"

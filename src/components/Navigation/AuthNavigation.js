@@ -3,23 +3,23 @@ import * as ROUTES from "../../constants/routes"
 import { Link } from "react-router-dom"
 import SignOutButton from "../SignOut"
 const AuthNavigation = () => (
-	<div>
-		<div>
+	<ul className="auth nav-list">
+		<li>
 			<Link to={ROUTES.LANDING}>Landing</Link>
-		</div>
-		<div>
+		</li>
+		<li>
 			<Link to={ROUTES.HOME}>Home</Link>
-		</div>
-		<div>
+		</li>
+		<li>
 			<Link to={ROUTES.ACCOUNT}>Account</Link>
-		</div>
-		<div>
+		</li>
+		<li>
 			<Link to={ROUTES.ADD_RECIPE}>Add recipe</Link>
-		</div>
-		<div>
+		</li>
+		<li>
 			<SignOutButton />
-		</div>
-	</div>
+		</li>
+	</ul>
 )
 
 export default AuthNavigation

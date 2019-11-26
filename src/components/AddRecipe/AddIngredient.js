@@ -3,7 +3,7 @@ const AddIngredient = props => {
 	const { setIngredient, ingredient, handleAddIngredient } = props
 	return (
 		<div>
-			<label for="recipe-ingredient">Ingredients:</label>
+			<label htmlFor="recipe-ingredient">Ingredients:</label>
 			<input
 				id="recipe-ingredient"
 				type="text"

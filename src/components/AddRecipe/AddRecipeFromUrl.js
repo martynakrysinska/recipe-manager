@@ -34,10 +34,10 @@ const AddFromUrl = props => {
 			<div>
 				{/* <UrlBar></UrlBar> */}
 
-				<div xs={4}>
+				<div>
 					<input defaultValue={json.title}></input>
 					<p>{json.diets.map(diet => `${diet} `)}</p>
-					<img src={json.image} width="100%"></img>
+					<img src={json.image}></img>
 					<h3>Instructions</h3>
 					<input
 						onChange={e => console.log(e.target.value)}
@@ -46,7 +46,7 @@ const AddFromUrl = props => {
 						defaultValue={json.instructions}
 					></input>
 				</div>
-				<div xs={7}>
+				<div>
 					<ListHeader setUnit={setUnit}></ListHeader>
 					<ul>
 						{ingredients.map((ingredient, i) => {

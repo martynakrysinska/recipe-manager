@@ -5,7 +5,7 @@ const ListItem = props => {
 
 	return (
 		<div>
-			<div xs={5}>
+			<div>
 				<button onClick={e => deleteItem(e, ingredient.id)}>-</button>
 				<input
 					onChange={e => console.log(e)}
@@ -13,7 +13,7 @@ const ListItem = props => {
 					defaultValue={ingredient.name}
 				></input>
 			</div>
-			<div xs={4}>
+			<div>
 				<input
 					onChange={e => console.log(e)}
 					className="ingredient-amount-input"
@@ -21,7 +21,7 @@ const ListItem = props => {
 					type="number"
 				></input>
 			</div>
-			<div xs={3}>
+			<div>
 				<input
 					onChange={e => console.log(e)}
 					className="ingredient-unit-input"

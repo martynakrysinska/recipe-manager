@@ -4,7 +4,7 @@ const Image = props => {
 	const { recipe } = props
 	return (
 		<div>
-			<img width="100%" src={recipe.image}></img>
+			<img src={recipe.image}></img>
 		</div>
 	)
 }
