@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import * as ROUTES from "../../constants/routes"
 const NonAuthNavigation = () => (
-	<ul>
+	<ul className="auth nav-list">
 		<li>
 			<Link to={ROUTES.LANDING}>Landing</Link>
 		</li>
